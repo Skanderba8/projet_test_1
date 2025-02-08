@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:projet_test_1/intervention_form.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,22 +34,6 @@ class _MyAppState extends State<MyApp> {
                 ElevatedButton(
                   onPressed: _incrementCounter,
                   child: const Text("Increment"),
-                ),
-                const SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => InterventionForm(
-                          onSave: (cableType) {
-                            print("Saved cable type: $cableType");
-                          },
-                        ),
-                      ),
-                    );
-                  },
-                  child: const Text("Start New Intervention"),
                 )
               ],
             ),
